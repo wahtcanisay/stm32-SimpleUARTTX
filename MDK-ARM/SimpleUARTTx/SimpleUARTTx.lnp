@@ -1,0 +1,24 @@
+--cpu Cortex-M3
+"simpleuarttx\startup_stm32f103xb.o"
+"simpleuarttx\main.o"
+"simpleuarttx\stm32f1xx_it.o"
+"simpleuarttx\stm32f1xx_hal_msp.o"
+"simpleuarttx\stm32f1xx_hal_gpio_ex.o"
+"simpleuarttx\stm32f1xx_hal_tim.o"
+"simpleuarttx\stm32f1xx_hal_tim_ex.o"
+"simpleuarttx\stm32f1xx_hal_uart.o"
+"simpleuarttx\stm32f1xx_hal.o"
+"simpleuarttx\stm32f1xx_hal_rcc.o"
+"simpleuarttx\stm32f1xx_hal_rcc_ex.o"
+"simpleuarttx\stm32f1xx_hal_gpio.o"
+"simpleuarttx\stm32f1xx_hal_dma.o"
+"simpleuarttx\stm32f1xx_hal_cortex.o"
+"simpleuarttx\stm32f1xx_hal_pwr.o"
+"simpleuarttx\stm32f1xx_hal_flash.o"
+"simpleuarttx\stm32f1xx_hal_flash_ex.o"
+"simpleuarttx\stm32f1xx_hal_exti.o"
+"simpleuarttx\system_stm32f1xx.o"
+--strict --scatter "SimpleUARTTx\SimpleUARTTx.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "SimpleUARTTx.map" -o SimpleUARTTx\SimpleUARTTx.axf
