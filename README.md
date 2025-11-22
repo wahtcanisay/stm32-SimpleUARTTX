@@ -26,18 +26,18 @@ HAl_statusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart,
                                     uint16_t Size,
                                     uint32_t Timeout)
 ```
-作用：通过串口向外发送数据
-参数：
-        *huart 串口句柄指针
-        *pData 要发送的数据指针
-        Size 要发送的数据数量，以字节为单位
-        Timeout 超时时间，单位ms，填写HAL_MAX_Delay代表无限期等待下去直到发送完成为止
+作用：通过串口向外发送数据  
+参数：      
+  *huart 串口句柄指针  
+  *pData 要发送的数据指针  
+  Size 要发送的数据数量，以字节为单位  
+  Timeout 超时时间，单位ms，填写HAL_MAX_Delay代表无限期等待下去直到发送完成为止  
 
-返回：返回数据发送结果 
-HAL_OK - 成功
-HAL_ERROR - 发送出错
-HAL_BUSY - 串口忙
-HAL_TIMEOUT - 发送超时
+返回：返回数据发送结果   
+HAL_OK - 成功  
+HAL_ERROR - 发送出错  
+HAL_BUSY - 串口忙  
+HAL_TIMEOUT - 发送超时  
 
 **声明变量内容并发送** ：
 ```c
@@ -63,7 +63,7 @@ HAL_UART_Transmit(&huart1, (uint8_t*)str, strlen(str), HAL_MAX_Delay);
 
 将代码写入main.c中UART初始化之后，while(1)循环之前的BEGIN和END注释之间
 
-随后进行调试代码，点击魔术棒找到C/C++将 Level3 改为 Level 0，再进行编译代码
-选择调试按钮，直接运行到发送数据的位置(右键点击Run to cursor line)
-在串口调试中首先以HEX十六进制接收数据，在keil5中点击两次单步调试就能收到5A和01 02 03 04 05
-再选择ASC2格式以字符格式接收数据，再进行单步调试就能收到a 和 hello world
+随后进行调试代码，点击魔术棒找到C/C++将 Level3 改为 Level 0，再进行编译代码  
+选择调试按钮，直接运行到发送数据的位置(右键点击Run to cursor line)  
+在串口调试中首先以HEX十六进制接收数据，在keil5中点击两次单步调试就能收到5A和01 02 03 04 05  
+再选择ASC2格式以字符格式接收数据，再进行单步调试就能收到a 和 hello world  
